@@ -1,0 +1,68 @@
+@import "_variables";
+@import "_mixins";
+
+.footer {
+  padding-top: 60px;
+  background-color: $colorBlack;
+  &__title {
+    @include text(16px, 21px, 400, $colorWhite);
+    text-align: center;
+  }
+  &__social {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__social-link {
+    transition: opacity 0.3s ease-in-out;
+  }
+  &__social-link:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__social-link:hover {
+    opacity: 0.7;
+  }
+  &__social-link:active {
+    opacity: 0.7;
+  }
+  &__social-link:focus {
+    opacity: 0.7;
+    outline: none;
+  }
+  &__inner {
+    margin-bottom: 27px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+  &__left-span {
+    @include text(13px, 17px, 400, rgba(255, 255, 255, 0.5));
+  }
+  &__left-link-email {
+    text-decoration: underline;
+    @include text(16px, 21px, 400, $colorWhite);
+    transition: opacity 0.3s ease-in-out;
+  }
+  &__left-link {
+    @include text(16px, 21px, 400, $colorWhite);
+    transition: opacity 0.3s ease-in-out;
+  }
+  &__left-link:hover,
+  &__left-link-email:hover {
+    opacity: 0.5;
+  }
+  &__left-link:active,
+  &__left-link-email:active {
+    opacity: 0.5;
+  }
+  &__left-link:focus,
+  &__left-link-email:focus {
+    opacity: 0.5;
+    outline: none;
+  }
+}

@@ -1,0 +1,84 @@
+@import "_variables";
+@import "_mixins";
+
+.ship-day {
+  background-color: $colorBlack;
+  &__container {
+    padding-top: 240px;
+  }
+  &__inner {
+    margin-top: 27px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 4px;
+  }
+  &__title {
+    text-align: center;
+  }
+  &__top {
+    display: flex;
+  }
+  &__left {
+    width: 50%;
+    margin-right: 10px;
+  }
+  &__right {
+    width: 50%;
+  }
+  &__right-title {
+    margin-bottom: 5px;
+    @include text(16px, 21px, 400, $colorBlack);
+  }
+  &__right-descr {
+    @include text(13px, 17px, 400, $colorBlack);
+  }
+  &__right-price {
+    max-width: 240px;
+
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__right-discounted {
+    font-size: 16px;
+    line-height: 21px;
+  }
+  &__list {
+    margin-top: 25px;
+    max-width: 240px;
+  }
+  &__list-item {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__list-span,
+  &__list-span-discount {
+    @include text(13px, 17px, 400, $colorBlack);
+  }
+  &__list-span-econom {
+    @include text(13px, 17px, 700, $red);
+  }
+  &__bottom {
+    margin-top: -3px;
+  }
+  &__bottom-center {
+    margin: 0 auto;
+    max-width: 280px;
+  }
+  &__bottom-promocode {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    @include text(16px, 21px, 700, $colorBlack);
+    border: 1px dashed $colorBlack;
+  }
+  &__bottom-btn {
+    margin-bottom: 35px;
+    width: 100%;
+    height: 60px;
+  }
+}
